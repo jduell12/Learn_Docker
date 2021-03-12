@@ -20,11 +20,31 @@
 
 # Build and Run an image
 - now that dockerfile is defined run docker build command in the terminal
-    docker build -t my-node-image:v1
+    ```docker build -t my-node-image:v1 . ```
         - -t specifies what to call the image 
         - can sepcify the version with :v1 
             - if left blank docker with add a latest to the image 
 
+- see list of docker images 
+    ```docker image ls```
+
+- create parent iamge 
+    - create parent file by running command in terminal
+    ```echo "FROM node:15" > Dockerfile.parent```
+
+- update the dockerfile by replacing the first line from ```FROM node:15``` to ```FROM my-parent-image```
+
+- rebuild image with new tag 
+    ```docker build -t my-image:15 .```
+
+- verify that the version 15 is being used 
+    ```docker inspect my-image:13 | grep NODE_VERSION```
+
+- run docker image 
+```docker run --name my-container -p 8000:8000 -d my-node-image``
+
+- see docker containers 
+```docker ps```
 # Volumes and local development 
 
 # Production Readiness
