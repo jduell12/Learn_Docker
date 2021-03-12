@@ -12,3 +12,6 @@ Learn to dockerize a NodeJS app as a first step into the world of DevOps.
 - how to orchestrate multiple containers with docker-compose 
 
 Learned via a meetup hosted by bitovi. https://www.bitovi.com/academy/learn-docker.html
+
+## Notes 
+- Notes taken during the meetup can be found in the Notes.md
