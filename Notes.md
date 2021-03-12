@@ -9,6 +9,15 @@
 - docker image is a static artifact that is built from a Dockerfile and is tagged and publisehd to a registry where it can be shared 
 - docker container is running an instance of a Docker image 
 
+- From node:15 
+    - run node application
+- set up arg for port and environment variable port 
+- set up a directory for the docker container 
+- set up files to add in the base directory 
+- run npm install to download dependencies
+- expose the port in docker 
+- start the application 
+
 # Build and Run an image
 
 # Volumes and local development 
