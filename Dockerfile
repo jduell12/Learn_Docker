@@ -1,4 +1,4 @@
-FROM node: 15
+FROM my-parent-image
 
 ARG PORT=8000
 ENV PORT=$PORT

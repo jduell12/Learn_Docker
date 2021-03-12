@@ -19,6 +19,11 @@
 - start the application 
 
 # Build and Run an image
+- now that dockerfile is defined run docker build command in the terminal
+    docker build -t my-node-image:v1
+        - -t specifies what to call the image 
+        - can sepcify the version with :v1 
+            - if left blank docker with add a latest to the image 
 
 # Volumes and local development 
 
