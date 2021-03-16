@@ -67,6 +67,15 @@
 ```docker rm -f my-container```
 
 # Volumes and local development 
+- volumes provide a persistent storage mechanism on Docker 
+    - when a change is made to the code it is made to the server so you don't have to keep removing and re-running the container after each change 
+
+# Docker Volume Commands
+- use volumes with a docker container 
+    - use the v flag to notify Docker using volumes
+    - make the local directory source folder to the app's source folder
+        - allows nodemon to detech the changes on the local computer in order the change the code in the docker container
+```docker run --name my-container -p 8000:8000 -d -v $PWD/src:/app/src my-node-app:latest ```
 
 # Production Readiness
 
