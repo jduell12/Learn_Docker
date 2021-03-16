@@ -78,5 +78,22 @@
 ```docker run --name my-container -p 8000:8000 -d -v $PWD/src:/app/src my-node-app:latest ```
 
 # Production Readiness
+- the base node package is very large and can be slimmed down using docker image variants 
+    - dockerhub will have list of the current supported images and their various image variants 
+- use multi-staged builds to build image in different ways depending if it's in development or production
+    - multiple FROM statements in Dockerfile
+    - can define multiple layers to run the app with
+    - use the base image to build other layers onto the application
 
+# Docker Production Readiness Commands
+- get image variants from docker
+```docker pull node:15-alpine```
+- compare the docker image sizes 
+    - node specifies which image and the variabnts we want to see 
+```docker image ls node```
+- run production image only (base image)
+    - specify which image to run by the name and target
+``` docker build -t my-node-app:prod --target=prod .```
+- run dev image only (image build on prod)
+```docker build -t my-node-app:dev --target=dev .  ```
 # Docker Compose
