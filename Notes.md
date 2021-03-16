@@ -97,3 +97,32 @@
 - run dev image only (image build on prod)
 ```docker build -t my-node-app:dev --target=dev .  ```
 # Docker Compose
+- services = containers     
+    - different syntax from Dockerfile to docker-compose file 
+    - ports
+        - same as the p flag in the docker run command 
+    - volumes
+        - sets up the volume structure 
+    - environment
+        - specifies the port for the container
+    - build 
+        - context 
+            - tells docker where to find build file
+        -target
+            - allows us to build the image based on .env variable 
+    - can add additional containers to run with docker-compose
+    - add them as a new service
+    - ex. adding a database to a app
+- volumes 
+    - outside of previous services 
+
+# Docker Compose Commands
+- run docker container with docker compose file
+```docker-compose up```
+- kill the container
+    - control C in the terminal where the container is running
+- run the docker build in the docker compose file
+``` docker-compose build```
+
+# Find Docker Commands in terminal
+- docker help
