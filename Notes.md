@@ -45,6 +45,27 @@
 
 - see docker containers 
 ```docker ps```
+
+# Docker commands to run an image
+- build an image 
+    - use -t tag to specific which image name and version 
+```docker build -t my-node-app:latest .```
+- check list of images on docker
+```docker image ls```
+- run a docker image
+    - name tag specifies which container name we are running
+    - p tag specific which port our local computer will run the docker application port
+    - d tag specifies to run the image as detached 
+    - naming the specific docker image and version to run
+```docker run --name my-container -p 8000:8000 -d my-node-app:latest```
+- check list of all running containers with docker
+```docker ps``
+- check log for a particular docker container that is running
+    - my-container is the name of the docker container that we are running and wanting to look at their logs 
+```docker logs my-container```
+- stop running a container 
+```docker rm -f my-container```
+
 # Volumes and local development 
 
 # Production Readiness
